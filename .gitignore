@@ -10,6 +10,9 @@
 # Ignore the www directory
 /www
 
+# and any others..
+*www/
+
 # Ignore the Cordova plugins folder
 /plugins
 
@@ -25,8 +28,9 @@
 *bin/
 *gen/
 
-*www/
 
 platforms/
 
 bower_components/
+
+vendor/
