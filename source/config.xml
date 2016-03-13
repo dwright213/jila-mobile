@@ -9,13 +9,27 @@
             <description>
                 
             </description>
-            <author email="" href="">
-                Nuu Wee Ya'
+            <author email="dan@danwright.co" href="https://github.com/dwright213/jila-mobile">
+                An app for learning the Siletz dialect of Athabaskan.
             </author>
             <content src="index.html" />
             
             
+            <!-- CSP/Whitelist stuff -->
+            <!-- Allow everything but only from the same origin and foo.com -->
+<!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' admin.danwright.co" />
+            <meta http-equiv="Content-Security-Policy" content="default-src 'self' jila-backend.s3-us-west-2.amazonaws.com" />
+ -->            
+            <access origin="http://admin.danwright.co/*" />
+            <access origin="https://admin.danwright.co/*" />
 
+            <access origin="http://jila-backend.s3-us-west-2.amazonaws.com/*" />
+            <access origin="https://jila-backend.s3-us-west-2.amazonaws.com/*" />
+
+            <access origin="content://jila-backends3-us-west-2.amazonaws.com/*" />
+
+            <allow-navigation href="data:*" />
+            <allow-navigation href="http://*" />
 
         <!--     <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
