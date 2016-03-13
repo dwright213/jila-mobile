@@ -1,17 +1,42 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.jila.vanilla" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Jila</name>
-    <description>
-        
-    </description>
-    <author email="" href="">
-        Jila
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="orientation" value="portrait" />
-    
-    <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
-    <preference name="StatusBarStyle" value="blacktranslucent" />
-</widget>
+    <widget 
+        id="org.jila.vanilla" 
+        version="0.0.1" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:app="http://schemas.android.com/apk/res-auto" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+            <name>Nuu Wee Ya</name>
+            <description>
+                
+            </description>
+            <author email="" href="">
+                Nuu Wee Ya'
+            </author>
+            <content src="index.html" />
+            
+            
+            <!-- CSP/Whitelist stuff -->
+            <!-- Allow everything but only from the same origin and foo.com -->
+<!--             <meta http-equiv="Content-Security-Policy" content="default-src 'self' admin.danwright.co" />
+            <meta http-equiv="Content-Security-Policy" content="default-src 'self' jila-backend.s3-us-west-2.amazonaws.com" />
+ -->            
+            <access origin="http://admin.danwright.co/*" />
+            <access origin="https://admin.danwright.co/*" />
+
+            <access origin="http://jila-backend.s3-us-west-2.amazonaws.com/*" />
+            <access origin="https://jila-backend.s3-us-west-2.amazonaws.com/*" />
+
+            <access origin="content://jila-backends3-us-west-2.amazonaws.com/*" />
+
+            <allow-navigation href="data:*" />
+            <allow-navigation href="http://*" />
+
+        <!--     <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+         -->
+
+            <preference name="orientation" value="portrait" />
+            <preference name="StatusBarOverlaysWebView" value="false" />
+            <preference name="StatusBarBackgroundColor" value="#000000" />
+            <preference name="StatusBarStyle" value="blacktranslucent" />
+    </widget>

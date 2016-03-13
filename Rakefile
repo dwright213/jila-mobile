@@ -4,7 +4,7 @@ load 'jasmine/tasks/jasmine.rake'
 desc "Install tools (this may require sudo)"
 task :install_tools do
   sh "npm install -g bower"
-  sh "npm install -g cordova plugman ios-deploy ios-sim"
+  sh "npm install -g cordova plugman" # ios-deploy ios-sim"
 end
 
 desc "Bootstrap the project using Middleman and Cordova"
@@ -13,15 +13,26 @@ task :bootstrap do
   sh "bower install"
 
   puts "Installing Cordova and plugins"
-  sh "cordova plugin add org.apache.cordova.device@0.2.11"
+
+  # sh "cordova plugin add cordova-plugin-file@4.1.0"
+  # sh "cordova plugin add cordova-plugin-inappbrowser@1.2.0"
+  # sh "cordova plugin add cordova-plugin-media@0.2.11"
+  # sh "cordova plugin add cordova-plugin-whitelist@1.2.1"
+
+  # sh "cordova plugin add cordova-plugin-dialogs@0.2.8"
+  # sh "cordova plugin add cordova-plugin-device@0.2.11"
+  # sh "cordova plugin add cordova-plugin-statusbar@0.1.10"
+
   sh "cordova plugin add org.apache.cordova.dialogs@0.2.8"
+  sh "cordova plugin add org.apache.cordova.device@0.2.11"
   sh "cordova plugin add org.apache.cordova.file@1.2.0"
   sh "cordova plugin add org.apache.cordova.inappbrowser@0.5.2"
   sh "cordova plugin add org.apache.cordova.media@0.2.11"
+
   sh "cordova plugin add org.apache.cordova.statusbar@0.1.10"
 
-  puts "Adding iOS and Android platforms"
-  sh "cordova platform add ios"
+  # puts "Adding iOS and Android platforms"
+  # sh "cordova platform add ios"
   sh "cordova platform add android"
 end
 

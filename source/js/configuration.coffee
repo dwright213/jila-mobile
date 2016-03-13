@@ -1,7 +1,7 @@
 
 # BACKEND_URL = 'http://yawuru.10.1.1.17.xip.io'
 
-BACKEND_URL = 'http://jila.herokuapp.com'
+BACKEND_URL = 'http://admin.danwright.co'
 # BACKEND_URL = 'http://yawuru.dev'
 
 angular.module('configuration', [])
